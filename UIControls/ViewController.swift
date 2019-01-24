@@ -13,12 +13,18 @@ class ViewController: UIViewController, UITableViewDataSource {
   let data:[[String]] = [["Item 1", "Item 2", "Item 3"],
                          ["Item A", "Item B", "Item C", "Item D"]]
   
+  let titles:[String] = ["Numbers", "Letters"]
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return data[section].count
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {
     return data.count
+  }
+  
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return titles[section]
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
