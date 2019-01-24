@@ -10,26 +10,35 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
   
-  let data:[[String]] = [["Item 1", "Item 2", "Item 3"],
-                         ["Item A", "Item B", "Item C", "Item D"]]
+  //let data:[[String]] = [["Item 1", "Item 2", "Item 3"],
+   //                      ["Item A", "Item B", "Item C", "Item D"]]
+  let data:[String] = ["Item 1", "Item 2", "Item 3"]
+  let subs:[String] = ["sub 1", "sub 2", "sub 3"]
   
-  let titles:[String] = ["Numbers", "Letters"]
+  
+  //let titles:[String] = ["Numbers", "Letters"]
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return data[section].count
+    //return data[section].count
+    return data.count
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {
     return data.count
   }
   
+  /*
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     return titles[section]
   }
+  */
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    cell.textLabel?.text = data[indexPath.section][indexPath.row]
+    //cell.textLabel?.text = data[indexPath.section][indexPath.row]
+    cell.textLabel?.text = data[indexPath.row]
+    cell.detailTextLabel?.text = subs[indexPath.row]
+    cell.imageView?.image = UIImage(named: "star")
     return cell
   }
   
