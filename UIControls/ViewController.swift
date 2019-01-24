@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
   @IBOutlet weak var textView: UITextView!
+  @IBOutlet weak var label: UILabel!
   
   
   override func viewDidLoad() {
@@ -37,5 +38,9 @@ class ViewController: UIViewController {
     present(activityViewController, animated: true, completion: nil)
   }
   
+  @IBAction func sliderValueChanged(_ sender: UISlider) {
+    label.text = "\(sender.value)"
+    
+  }
 }
 
