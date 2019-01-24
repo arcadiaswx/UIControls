@@ -10,15 +10,20 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
   
-  let data:[String] = ["Item 1", "Item 2", "Item 3"]
+  let data:[[String]] = [["Item 1", "Item 2", "Item 3"],
+                         ["Item A", "Item B", "Item C", "Item D"]]
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return data[section].count
+  }
+  
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return data.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    cell.textLabel?.text = data[indexPath.row]
+    cell.textLabel?.text = data[indexPath.section][indexPath.row]
     return cell
   }
   
