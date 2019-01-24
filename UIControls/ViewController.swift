@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
   //let data:[[String]] = [["Item 1", "Item 2", "Item 3"],
    //                      ["Item A", "Item B", "Item C", "Item D"]]
   let data:[String] = ["Item 1", "Item 2", "Item 3"]
   let subs:[String] = ["sub 1", "sub 2", "sub 3"]
-  
+  let colors:[UIColor] = [.red, .green, .blue]
   
   //let titles:[String] = ["Numbers", "Letters"]
   
@@ -34,15 +34,19 @@ class ViewController: UIViewController, UITableViewDataSource {
   */
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
+    cell.label.text = data[indexPath.row]
     //cell.textLabel?.text = data[indexPath.section][indexPath.row]
-    cell.textLabel?.text = data[indexPath.row]
-    cell.detailTextLabel?.text = subs[indexPath.row]
-    cell.imageView?.image = UIImage(named: "star")
+    //cell.textLabel?.text = data[indexPath.row]
+    //cell.detailTextLabel?.text = subs[indexPath.row]
+    //cell.imageView?.image = UIImage(named: "star")?.withRenderingMode(.alwaysTemplate)
+    //cell.imageView?.tintColor = colors[indexPath.row]
     return cell
   }
   
-
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("\(data[indexPath.row])")
+  }
     override func viewDidLoad() {
         super.viewDidLoad()
 
