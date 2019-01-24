@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var textView: UITextView!
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -28,5 +31,11 @@ class ViewController: UIViewController {
     alert.addAction(action2)
     present(alert, animated: true, completion: nil)
   }
+  
+  @IBAction func shareText(_ sender: Any) {
+    let activityViewController = UIActivityViewController(activityItems: [textView.text], applicationActivities: nil)
+    present(activityViewController, animated: true, completion: nil)
+  }
+  
 }
 
