@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4448A68F21FA155100D95DC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4448A68E21FA155100D95DC0 /* AppDelegate.swift */; };
-		4448A69121FA155100D95DC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4448A69021FA155100D95DC0 /* ViewController.swift */; };
+		4448A69121FA155100D95DC0 /* UIControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4448A69021FA155100D95DC0 /* UIControlsViewController.swift */; };
 		4448A69421FA155100D95DC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4448A69221FA155100D95DC0 /* Main.storyboard */; };
 		4448A69621FA155200D95DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4448A69521FA155200D95DC0 /* Assets.xcassets */; };
 		4448A69921FA155200D95DC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4448A69721FA155200D95DC0 /* LaunchScreen.storyboard */; };
+		4448A6A121FA20A300D95DC0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4448A6A021FA20A300D95DC0 /* TableViewController.swift */; };
+		4448A6A321FA24CA00D95DC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4448A6A221FA24CA00D95DC0 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4448A68B21FA155100D95DC0 /* UIControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4448A68E21FA155100D95DC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4448A69021FA155100D95DC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4448A69021FA155100D95DC0 /* UIControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlsViewController.swift; sourceTree = "<group>"; };
 		4448A69321FA155100D95DC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4448A69521FA155200D95DC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4448A69821FA155200D95DC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4448A69A21FA155200D95DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4448A6A021FA20A300D95DC0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4448A6A221FA24CA00D95DC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				4448A68E21FA155100D95DC0 /* AppDelegate.swift */,
-				4448A69021FA155100D95DC0 /* ViewController.swift */,
+				4448A6A221FA24CA00D95DC0 /* ViewController.swift */,
+				4448A69021FA155100D95DC0 /* UIControlsViewController.swift */,
 				4448A69221FA155100D95DC0 /* Main.storyboard */,
 				4448A69521FA155200D95DC0 /* Assets.xcassets */,
 				4448A69721FA155200D95DC0 /* LaunchScreen.storyboard */,
 				4448A69A21FA155200D95DC0 /* Info.plist */,
+				4448A6A021FA20A300D95DC0 /* TableViewController.swift */,
 			);
 			path = UIControls;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4448A69121FA155100D95DC0 /* ViewController.swift in Sources */,
+				4448A69121FA155100D95DC0 /* UIControlsViewController.swift in Sources */,
+				4448A6A121FA20A300D95DC0 /* TableViewController.swift in Sources */,
+				4448A6A321FA24CA00D95DC0 /* ViewController.swift in Sources */,
 				4448A68F21FA155100D95DC0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

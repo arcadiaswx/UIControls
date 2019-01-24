@@ -8,39 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-  @IBOutlet weak var textView: UITextView!
-  @IBOutlet weak var label: UILabel!
+class ViewController: UIViewController, UITableViewDataSource {
   
+  let data:[String] = ["Item 1", "Item 2", "Item 3"]
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 3
   }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    cell.textLabel?.text = data[indexPath.row]
+    return cell
+  }
+  
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-  @IBAction func showAlert(_ sender: Any) {
-    let alert = UIAlertController(title: "Alert Title", message: "Alert Message", preferredStyle: .alert)
-    let action1 = UIAlertAction(title: "OK", style: .cancel) { (action) in
-      print("button was presed")
+        // Do any additional setup after loading the view.
     }
-    alert.addAction(action1)
-    let action2 = UIAlertAction(title: "Delete", style: .destructive) { (action) in
-      print("button 2 was pressed")
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    alert.addAction(action2)
-    present(alert, animated: true, completion: nil)
-  }
-  
-  @IBAction func shareText(_ sender: Any) {
-    let activityViewController = UIActivityViewController(activityItems: [textView.text], applicationActivities: nil)
-    present(activityViewController, animated: true, completion: nil)
-  }
-  
-  @IBAction func sliderValueChanged(_ sender: UISlider) {
-    label.text = "\(sender.value)"
-    
-  }
+    */
+
 }
-
