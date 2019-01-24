@@ -16,5 +16,17 @@ class ViewController: UIViewController {
   }
 
 
+  @IBAction func showAlert(_ sender: Any) {
+    let alert = UIAlertController(title: "Alert Title", message: "Alert Message", preferredStyle: .alert)
+    let action1 = UIAlertAction(title: "OK", style: .cancel) { (action) in
+      print("button was presed")
+    }
+    alert.addAction(action1)
+    let action2 = UIAlertAction(title: "Delete", style: .destructive) { (action) in
+      print("button 2 was pressed")
+    }
+    alert.addAction(action2)
+    present(alert, animated: true, completion: nil)
+  }
 }
 
